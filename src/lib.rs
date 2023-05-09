@@ -318,7 +318,7 @@ impl std::fmt::Display for Section {
 #[cfg(test)]
 mod tests {
     use std::path::PathBuf;
-    use File;
+    use crate::File;
 
     #[test]
     fn test_open_path() {
