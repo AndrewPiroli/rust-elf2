@@ -50,7 +50,6 @@ pub fn read_u64<T: io::Read>(endian: types::Data, io: &mut T) -> Result<u64, Par
     }
 }
 
-use std;
 pub fn get_string(data: &[u8], start: usize) -> Result<String, std::string::FromUtf8Error> {
     String::from_utf8(Vec::from_iter(data[start..].iter().take_while(|c|**c != 0).copied()))
 }
